@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<accordion width="300" height="100%">
+	<vbox text="Panel 1">
+		<button text="Button 1" />
+	</vbox>
+	<vbox text="Panel 2">
+		<button text="Button 2" />
+	</vbox>
+	<vbox text="Panel 3">
+		<button text="Button 3" />
+	</vbox>
+	<vbox text="Panel 4">
+		<button text="Button 4" />
+	</vbox>
+</accordion>

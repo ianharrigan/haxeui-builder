@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menubar>
+	<menubutton text="File" id="menuFile">
+		<menu>
+			<menuitem text="Open..." id="menuOpen" />
+		</menu>
+	</menubutton>
+	<menubutton text="Examples" id="menuExamples">
+	</menubutton>
+	<menubutton text="Help" id="menuHelp">
+		<menu>
+			<menuitem text="About..." id="menuAbout" />
+		</menu>
+	</menubutton>
+	
+	<spacer width="100%" />
+	
+	<listSelector text="Default Theme" id="theme" width="140">
+		<json>[{"text":"Default Theme", "id": "default"},{"text":"Gradient Theme", "id":"gradient"}]</json>
+	</listSelector>
+</menubar>
