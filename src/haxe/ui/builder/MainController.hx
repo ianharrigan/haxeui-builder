@@ -23,6 +23,8 @@ class MainController extends XMLController {
 		EXAMPLES.set("Accordion", "data/accordion.xml");
 		EXAMPLES.set("ListView", "data/listview.xml");
 		EXAMPLES.set("Grid Layout", "data/grid_layout.xml");
+		EXAMPLES.set("Layout Builder", "ui/main.xml");
+		EXAMPLES.set("Scripted Calculator", "data/calc.xml");
 		
 		var themeName:String = "Default";
 		if (Prefs.theme == "default") {

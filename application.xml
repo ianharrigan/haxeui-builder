@@ -18,6 +18,7 @@
 	<haxelib name="actuate" />
 	<haxelib name="haxeui" />
 	<haxelib name="haxeui-file-dialogs" />
+	<haxelib name="haxeui-rich-text" />
 	
 	<icon path="assets/application-default-icon.svg" />
 	<assets path="assets" rename="assets" />

@@ -7,6 +7,8 @@ import haxe.ui.toolkit.core.Root;
 import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.style.DefaultStyles;
 import haxe.ui.toolkit.style.StyleManager;
+import haxe.ui.toolkit.themes.DefaultTheme;
+import haxe.ui.toolkit.themes.GradientTheme;
 
 class Main {
 	public static function main() {
@@ -14,9 +16,9 @@ class Main {
 		Toolkit.setTransitionForClass(Accordion, "slide");
 		Toolkit.setTransitionForClass(Popup, "slide");
 		if (Prefs.theme == "default") {
-			StyleManager.instance.addStyles(new DefaultStyles());
+			Toolkit.theme = new DefaultTheme();
 		} else if (Prefs.theme == "gradient") {
-			Macros.addStyleSheet("styles/gradient/gradient.css");
+			Toolkit.theme = new GradientTheme();
 		}
 		Toolkit.init();
 		Toolkit.openFullscreen(function(root:Root) {
