@@ -1,23 +1,30 @@
 package haxe.ui.builder;
 
+import haxe.Http;
 import haxe.ui.dialogs.files.FileDetails;
 import haxe.ui.dialogs.files.FileDialogs;
 import haxe.ui.toolkit.controls.Menu;
 import haxe.ui.toolkit.controls.MenuButton;
 import haxe.ui.toolkit.controls.MenuItem;
+import haxe.ui.toolkit.controls.popups.Popup;
 import haxe.ui.toolkit.core.PopupManager;
 import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.MenuEvent;
 import haxe.ui.toolkit.events.UIEvent;
 import haxe.ui.toolkit.resources.ResourceManager;
+import lime.net.URLRequest;
+import openfl.Lib;
 
 @:build(haxe.ui.toolkit.core.Macros.buildController("assets/ui/main.xml"))
 class MainController extends XMLController {
 	private static inline var DEFAULT:String = "Button";
+	//private static inline var SERVER:String = "http://localhost:8080/haxeui/";
+	private static inline var SERVER:String = "http://haxeui.org/";
+	
 	private static var EXAMPLES:Map<String, String>;
 	
-	public function new() {
+	public function new(layoutId:String = null) {
 		EXAMPLES = new Map<String, String>();
 		EXAMPLES.set("Button", "data/button.xml");
 		EXAMPLES.set("Accordion", "data/accordion.xml");
@@ -25,6 +32,7 @@ class MainController extends XMLController {
 		EXAMPLES.set("Grid Layout", "data/grid_layout.xml");
 		EXAMPLES.set("Layout Builder", "ui/main.xml");
 		EXAMPLES.set("Scripted Calculator", "data/calc.xml");
+		EXAMPLES.set("Dividers", "data/dividers.xml");
 		
 		var themeName:String = "Default";
 		if (Prefs.theme == "default") {
@@ -38,7 +46,9 @@ class MainController extends XMLController {
 			showSimplePopup("The theme has been changed. You must restart (or refresh) the application to use the new theme.", "Theme Changed");
 		};
 		
-		layoutCode.text = StringTools.replace(ResourceManager.instance.getText(EXAMPLES.get(DEFAULT)), "\r", "");
+		if (layoutId == null) {
+			layoutCode.text = StringTools.replace(ResourceManager.instance.getText(EXAMPLES.get(DEFAULT)), "\r", "");
+		}
 		mainTabs.onChange = onTabsChange;
 		
 		attachEvent("menuFile", MenuEvent.SELECT, function(e:MenuEvent) {
@@ -59,6 +69,10 @@ class MainController extends XMLController {
 				default:
 			}
 		});
+		
+		store.onClick = function(e) {
+			storeLayout();
+		}
 		
 		buildMenu();
 	}
@@ -100,5 +114,38 @@ class MainController extends XMLController {
 				onTabsChange(null);
 			}
 		});
+	}
+	
+	private function storeLayout():Void {
+		var request:Http = new Http(SERVER + "actions/layout-builder?random=" + Math.random());
+		request.addParameter("action", "store");
+		request.addParameter("layoutCode", layoutCode.text);
+		request.onError = function(msg) {
+			showSimplePopup("Problem saving layout:\n\n" + msg);
+		}
+		request.onStatus = function(status:Int) {
+		}
+		request.onData = function(response) {
+			Lib.getURL(new URLRequest(SERVER + "try.jsp?layoutId=" + response), "_self");
+		}
+		
+		request.request();
+	}
+	
+	public function retrieveLayout(layoutId):Void {
+		var request:Http = new Http(SERVER + "actions/layout-builder?random=" + Math.random());
+		request.addParameter("action", "retrieve");
+		request.addParameter("layoutId", layoutId);
+		request.onError = function(msg) {
+			showSimplePopup("Problem loading layout:\n\n" + msg);
+		}
+		request.onStatus = function(status:Int) {
+		}
+		request.onData = function(response) {
+			response = StringTools.replace(response, "\r\n", "\n");
+			layoutCode.text = response;
+		}
+		
+		request.request();
 	}
 }

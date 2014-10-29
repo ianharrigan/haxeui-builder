@@ -5,6 +5,7 @@
 	<tabview width="100%" height="100%" id="mainTabs">
 		<vbox text="Layout" width="100%" height="100%">
 			<code id="layoutCode" width="100%" height="100%" syntax="xml"></code>
+			<button id="store" text="Save" horizontalAlign="right" icon="ui/disk-black.png" iconPosition="right" />
 		</vbox>
 		<vbox width="100%" height="100%" text="Result" id="resultContainer" layout="absolute">
 			

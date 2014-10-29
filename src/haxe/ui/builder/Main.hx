@@ -22,7 +22,19 @@ class Main {
 		}
 		Toolkit.init();
 		Toolkit.openFullscreen(function(root:Root) {
-			root.addChild(new MainController().view);
+			var layoutId:String = null;
+			#if flash
+			layoutId = Reflect.field(flash.Lib.current.root.loaderInfo.parameters, "layoutId");
+			#end
+			
+			if (layoutId != null && layoutId.length == 0) {
+				layoutId = null;
+			}
+			var controller:MainController = new MainController(layoutId);
+			root.addChild(controller.view);
+			if (layoutId != null) {
+				controller.retrieveLayout(layoutId);
+			}
 		});
 	}
 }
