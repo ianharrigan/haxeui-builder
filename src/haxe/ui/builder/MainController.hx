@@ -65,7 +65,8 @@ class MainController extends XMLController {
 		attachEvent("menuHelp", MenuEvent.SELECT, function(e:MenuEvent) {
 			switch (e.menuItem.id) {
 				case "menuAbout":
-					showCustomPopup("ui/about.xml", "About", {width: 400, buttons: PopupButton.OK});
+					//showCustomPopup("ui/about.xml", "About", { width: 400, buttons: PopupButton.OK } );
+					showCustomPopup(new AboutController().view, { width: 400, buttons: PopupButton.OK } );
 				default:
 			}
 		});

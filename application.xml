@@ -14,6 +14,8 @@
 	
 	<!-- classpath, haxe libs -->
 	<source path="src" />
+	<classpath name="assets" />
+	
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
 	<haxelib name="haxeui" />
@@ -23,12 +25,8 @@
 	
 	<icon path="assets/application-default-icon.svg" />
 	<assets path="assets" rename="assets" />
-	
-	<assets path="assets/ui" rename="ui" exclude="*.xml|*.css" if="html5" />
-	<assets path="assets/ui" rename="ui" unless="html5" />
-	<assets path="assets/data" rename="data" exclude="*.xml|*.css" if="html5" />
-	<assets path="assets/data" rename="data" unless="html5" />
-	<assets path="assets" rename="assets"/>
+	<assets path="assets/ui" rename="ui" />
+	<assets path="assets/data" rename="data" />
 	<assets path="assets/fonts" rename="fonts"/>
 	
 	<!-- optimize output

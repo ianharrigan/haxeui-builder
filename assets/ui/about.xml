@@ -22,6 +22,9 @@
 		
 		<text text="Source: "/>
 		<text text="https://github.com/ianharrigan/haxeui/"/>
+		
+		<text verticalAlign="top" text="Version Info:" />
+		<text id="versionInfo" text="" />
 	</grid>
 	
 	<spacer height="15" />
