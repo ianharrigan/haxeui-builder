@@ -19,6 +19,7 @@
 	<haxelib name="haxeui" />
 	<haxelib name="haxeui-file-dialogs" />
 	<haxelib name="haxeui-rich-text" />
+	<haxelib name="format" />
 	
 	<icon path="assets/application-default-icon.svg" />
 	<assets path="assets" rename="assets" />

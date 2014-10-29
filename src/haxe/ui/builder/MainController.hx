@@ -129,7 +129,7 @@ class MainController extends XMLController {
 			Lib.getURL(new URLRequest(SERVER + "try.jsp?layoutId=" + response), "_self");
 		}
 		
-		request.request(true);
+		request.request(false);
 	}
 	
 	public function retrieveLayout(layoutId):Void {
@@ -146,6 +146,6 @@ class MainController extends XMLController {
 			layoutCode.text = response;
 		}
 		
-		request.request(true);
+		request.request(false);
 	}
 }
