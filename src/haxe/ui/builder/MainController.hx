@@ -13,8 +13,8 @@ import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.MenuEvent;
 import haxe.ui.toolkit.events.UIEvent;
 import haxe.ui.toolkit.resources.ResourceManager;
-import lime.net.URLRequest;
 import openfl.Lib;
+import openfl.net.URLRequest;
 
 @:build(haxe.ui.toolkit.core.Macros.buildController("assets/ui/main.xml"))
 class MainController extends XMLController {
