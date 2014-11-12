@@ -12,6 +12,8 @@ import haxe.ui.toolkit.themes.GradientTheme;
 
 class Main {
 	public static function main() {
+		var s:Smiley;
+		
 		Toolkit.defaultTransition = "none";
 		Toolkit.setTransitionForClass(Accordion, "slide");
 		Toolkit.setTransitionForClass(Popup, "slide");
