@@ -28,6 +28,7 @@
 	<assets path="assets/ui" rename="ui" />
 	<assets path="assets/data" rename="data" />
 	<assets path="assets/fonts" rename="fonts"/>
+	<assets path="assets/img" rename="img"/>
 	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->

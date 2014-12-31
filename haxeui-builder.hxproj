@@ -18,23 +18,22 @@
   <classpaths>
     <class path="C:\Servers\Haxe\haxe\lib\lime\2,0,0-alpha,2" />
     <class path="C:\Servers\Haxe\haxe\lib\haxeui-file-dialogs\0,1,1" />
-    <class path="C:\Servers\Haxe\haxe\lib\haxeui-rich-text\0,1,1" />
+    <class path="C:\Servers\Haxe\haxe\lib\haxeui-rich-text\0,1,2" />
     <class path="C:\Servers\Haxe\haxe\lib\actuate\1,7,5" />
-    <class path="C:\Servers\Haxe\haxe\lib\openfl\2,1,4" />
+    <class path="C:\Servers\Haxe\haxe\lib\openfl\2,1,8" />
     <class path="C:\Servers\Haxe\haxe\lib\hscript\2,0,4" />
-    <class path="Z:\GitHub\haxeui" />
+    <class path="C:\Servers\Haxe\haxe\lib\haxeui\1,6,13" />
     <class path="C:\Servers\Haxe\haxe\lib\svg\1,0,8" />
     <class path="C:\Servers\Haxe\haxe\lib\format\3,1,1" />
     <class path="src" />
-    <class path="Z:\GitHub\haxeui\styles" />
-    <class path="Z:\GitHub\haxeui\fonts" />
+    <class path="assets" />
     <class path="C:\Servers\Haxe\haxe\lib\haxeui-file-dialogs\0,1,1\assets" />
-    <class path="C:\Servers\Haxe\haxe\lib\haxeui-rich-text\0,1,1\assets" />
+    <class path="C:\Servers\Haxe\haxe\lib\haxeui-rich-text\0,1,2\assets" />
     <class path="bin\flash\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="lime=2.0.0-alpha.2&#xA;haxeui-file-dialogs=0.1.1&#xA;haxeui-rich-text=0.1.1&#xA;actuate=1.7.5&#xA;openfl=2.1.4&#xA;hscript=2.0.4&#xA;haxeui=1.6.1&#xA;svg=1.0.8&#xA;format=3.1.1&#xA;tools=2.0.0-alpha.2&#xA;no-compilation&#xA;openfl-flash&#xA;web" />
+    <option directives="lime=2.0.0-alpha.2&#xA;haxeui-file-dialogs=0.1.1&#xA;haxeui-rich-text=0.1.2&#xA;actuate=1.7.5&#xA;openfl=2.1.8&#xA;hscript=2.0.4&#xA;haxeui=1.6.13&#xA;svg=1.0.8&#xA;format=3.1.1&#xA;tools=2.0.0-alpha.2&#xA;no-compilation&#xA;openfl-flash&#xA;web" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
