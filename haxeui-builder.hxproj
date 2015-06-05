@@ -31,7 +31,7 @@
     <class path="assets" />
     <class path="C:\Servers\Haxe\haxe\lib\haxeui-file-dialogs\0,1,1\assets" />
     <class path="C:\Servers\Haxe\haxe\lib\haxeui-rich-text\0,1,2\assets" />
-    <class path="bin\windows\neko\haxe" />
+    <class path="bin\windows\cpp\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>

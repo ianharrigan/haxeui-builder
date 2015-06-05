@@ -3,6 +3,7 @@ package haxe.ui.builder;
 import haxe.Http;
 import haxe.ui.dialogs.files.FileDetails;
 import haxe.ui.dialogs.files.FileDialogs;
+import haxe.ui.toolkit.containers.VBox;
 import haxe.ui.toolkit.controls.Menu;
 import haxe.ui.toolkit.controls.MenuButton;
 import haxe.ui.toolkit.controls.MenuItem;
@@ -98,10 +99,11 @@ class MainController extends XMLController {
 			try {
 				var xml:Xml = Xml.parse(layoutString);
 				var r = Toolkit.processXml(xml);
-				resultContainer.removeAllChildren();
-				resultContainer.addChild(r);
+				mainTabs.selectedPage.removeAllChildren();
+				mainTabs.selectedPage.addChild(r);
 			} catch (ex:Dynamic) {
-				resultContainer.removeAllChildren();
+				trace(ex);
+				mainTabs.selectedPage.removeAllChildren();
 				showSimplePopup(ex, "Error", PopupButton.OK, function(e) {
 					mainTabs.selectedIndex = 0;
 				});

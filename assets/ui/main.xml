@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%" height="100%">
 	<import resource="ui/menu.xml" />
-	
 	<tabview width="100%" height="100%" id="mainTabs">
 		<vbox text="Layout" width="100%" height="100%">
 			<code id="layoutCode" width="100%" height="100%" syntax="haxeui-xml"></code>
