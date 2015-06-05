@@ -10,7 +10,7 @@ class Prefs {
 
 	public static var theme(get, set):String;
 	private static function get_theme():String {
-		return getPref("theme", "default");
+		return getPref("theme", "gradient");
 	}
 	private static function set_theme(value:String):String {
 		setPref("theme", value);

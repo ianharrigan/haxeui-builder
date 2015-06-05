@@ -33,6 +33,7 @@ class MainController extends XMLController {
 		EXAMPLES.set("Layout Builder", "ui/main.xml");
 		EXAMPLES.set("Scripted Calculator", "data/calc.xml");
 		EXAMPLES.set("Dividers", "data/dividers.xml");
+		EXAMPLES.set("Splitters", "data/splitters.xml");
 		
 		var themeName:String = "Default";
 		if (Prefs.theme == "default") {

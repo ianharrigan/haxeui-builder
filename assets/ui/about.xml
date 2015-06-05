@@ -12,16 +12,16 @@
 	
 	<grid columns="2" width="100%">
 		<text text="Site: "/>
-		<text text="http://haxeui.org/"/>
+		<link url="http://haxeui.org/" text="http://haxeui.org/"/>
 		
 		<text text="Wiki: "/>
-		<text text="http://haxeui.org/wiki/"/>
+		<link url="http://haxeui.org/wiki/" text="http://haxeui.org/wiki/"/>
 		
 		<text text="API: "/>
-		<text text="http://haxeui.org/docs/api/"/>
+		<link url="http://haxeui.org/docs/api/" text="http://haxeui.org/docs/api/"/>
 		
 		<text text="Source: "/>
-		<text text="https://github.com/ianharrigan/haxeui/"/>
+		<link url="https://github.com/ianharrigan/haxeui/" text="https://github.com/ianharrigan/haxeui/"/>
 		
 		<text verticalAlign="top" text="Version Info:" />
 		<text id="versionInfo" text="" />

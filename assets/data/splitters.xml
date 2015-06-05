@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vsplitter width="100%" height="100%">
+	<box width="100%" height="20%" style="padding:10">
+		<button text="Top" width="100%" height="100%" />
+	</box>
+	
+	<hsplitter width="100%" height="60%" minHeight="100">
+		<box width="20%" height="100%" style="padding:10" minWidth="100">
+			<button text="Left" width="100%" height="100%" />
+		</box>
+		<box width="70%" height="100%" style="padding:10" minWidth="200">
+			<button text="Center" width="100%" height="100%" />
+		</box>
+		<box width="10%" height="100%" style="padding:10">
+			<button text="Right" width="100%" height="100%" />
+		</box>
+	</hsplitter>
+	
+	<box width="100%" height="20%" style="padding:10">
+		<button text="Bottom" width="100%" height="100%" />
+	</box>
+</vsplitter>

@@ -22,6 +22,7 @@
 	<haxelib name="haxeui-file-dialogs" />
 	<haxelib name="haxeui-rich-text" />
 	<haxelib name="format" />
+	<haxelib name="yagp" />
 	
 	<icon path="assets/application-default-icon.svg" />
 	<assets path="assets" rename="assets" />
@@ -29,6 +30,7 @@
 	<assets path="assets/data" rename="data" />
 	<assets path="assets/fonts" rename="fonts"/>
 	<assets path="assets/img" rename="img"/>
+	<assets path="assets/gif" rename="gif" type="binary"/>
 	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->

@@ -17,11 +17,7 @@ class Main {
 		Toolkit.defaultTransition = "none";
 		Toolkit.setTransitionForClass(Accordion, "slide");
 		Toolkit.setTransitionForClass(Popup, "slide");
-		if (Prefs.theme == "default") {
-			Toolkit.theme = new DefaultTheme();
-		} else if (Prefs.theme == "gradient") {
-			Toolkit.theme = new GradientTheme();
-		}
+		Toolkit.theme = Prefs.theme;
 		Toolkit.init();
 		Toolkit.openFullscreen(function(root:Root) {
 			var layoutId:String = null;
